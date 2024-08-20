@@ -1,0 +1,12 @@
+<script>
+    // Adding the site logo and title to the navbar like this until JTD adds support for it:
+    // https://github.com/just-the-docs/just-the-docs/issues/938
+    const logoWrapper = document.querySelector(".site-title");
+    const siteLogo = document.querySelector(".site-logo");
+    siteLogo.style.width = "30px";
+    const siteTitle = document.createElement("span");
+    siteTitle.textContent = "网页模版";
+    siteTitle.style.color = "#2f86eb";
+    siteTitle.style.marginLeft = "10px";
+    logoWrapper.appendChild(siteTitle);
+</script>

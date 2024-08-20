@@ -1,0 +1,11 @@
+<script>
+    (function () {
+        var navList = document.querySelector('.aux-nav-list');
+        if (!navList || !navList.firstElementChild) return;
+        var darkToggle = navList.firstElementChild;
+        darkToggle.addEventListener('click', (e) => {
+            e.preventDefault();
+            toggleDark();
+        });
+    })();
+</script>

@@ -1,0 +1,12 @@
+@import "./color_schemes/light";
+
+$content-width: 68.75rem;
+$link-color: #2f86eb;
+
+$media-queries: (
+        xs: 320px,
+        sm: 500px,
+        md: $content-width,
+        lg: $content-width + $nav-width,
+        xl: 1400px,
+);
