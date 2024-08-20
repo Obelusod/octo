@@ -14,5 +14,7 @@ _site/
 .bundle/
 vendor/
 
+Gemfile.lock
+
 # IntelliJ project files
 .idea
