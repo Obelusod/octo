@@ -3,19 +3,29 @@ logo: "/assets/images/logo.png"
 description: 一个简单的基础模版!
 baseurl: ''
 url: https://obelusod.github.io/octo
-exclude: ["Gemfile", "Gemfile.lock", "vendor", "LICENSE", "README.md"]
+
+exclude:
+  - .sass-cache/
+  - .jekyll-cache/
+  - Gemfile
+  - Gemfile.lock
+  - vendor/
+  - LICENSE
+  - README.md
 
 max_nav_depth: 4
 
 remote_theme: just-the-docs/just-the-docs
-color_scheme: elegant
+color_scheme: octo
 search_enabled: true
 heading_anchors: true
 permalink: pretty
 aux_links:
   深色模式:
     - '#'
-footer_content:
+  在 GitHub 上查看:
+    - https://github.com/Obelusod/octo
+aux_links_new_tab: true
 
 compress_html:
   clippings: all
