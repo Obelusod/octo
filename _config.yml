@@ -1,6 +1,6 @@
-title: 网页模版
+title: Just the Octo
 logo: "/assets/images/logo.png"
-description: 一个简单的基础模版!
+description: 一个简单、优雅的博客/文档模版!
 baseurl: ''
 url: https://obelusod.github.io/octo
 
@@ -23,7 +23,7 @@ permalink: pretty
 aux_links:
   深色模式:
     - '#'
-  在 GitHub 上查看:
+  GitHub:
     - https://github.com/Obelusod/octo
 aux_links_new_tab: true
 
