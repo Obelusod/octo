@@ -23,8 +23,6 @@
 
 更多信息请参阅 [Just the Docs](https://just-the-docs.com) 文档。
 
-更多信息请参阅 [Just the Docs](https://just-the-docs.com) 文档。
-
 ## 本地构建
 
 1. 安装 [Ruby](https://www.ruby-lang.org)、[Jekyll](https://jekyllrb.com) 和 [Bundler](https://bundler.io)
