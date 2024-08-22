@@ -27,6 +27,15 @@ aux_links:
     - https://github.com/Obelusod/octo
 aux_links_new_tab: true
 
+gh_edit_link: true
+gh_edit_link_text: "在 GitHub 上编辑此页面"
+gh_edit_repository: "https://github.com/Obelusod/octo"
+gh_edit_branch: "main"
+gh_edit_view_mode: "tree"
+
+mermaid:
+  version: "10.9.1"
+
 compress_html:
   clippings: all
   comments: all
