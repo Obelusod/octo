@@ -1,7 +1,7 @@
 ---
 layout: page
 title: UI Components
-nav_order: 3
+nav_order: 1
 has_children: true
 permalink: /docs/ui-components
 hide_title: true

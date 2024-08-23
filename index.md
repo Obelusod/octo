@@ -28,7 +28,8 @@ released: true
 - 侧边栏导航
 - 全文搜索与索引
 - kramdown 语法
-- Mermaid 支持
+- 支持 KaTeX 与 MathJax
+- 支持 Mermaid
 - 高度可定制
 
 ---

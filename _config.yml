@@ -9,7 +9,6 @@ exclude:
   - .jekyll-cache/
   - Gemfile
   - Gemfile.lock
-  - vendor/
   - LICENSE
   - README.md
 

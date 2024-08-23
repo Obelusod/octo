@@ -13,3 +13,18 @@ code {
     display: none;
   }
 }
+
+.site-title-container {
+  display: flex;
+  align-items: center;
+}
+
+.title-logo {
+  width: 30px;
+  height: 30px;
+}
+
+.title-text {
+  color: #87bcd6;
+  margin-left: 10px;
+}
