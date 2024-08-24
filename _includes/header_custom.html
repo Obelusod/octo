@@ -1,0 +1,46 @@
+<button class="btn btn-icon js-theme-switcher" style="padding: 0.8em 0.4em 0.5em 0.8em;" title="切换深色/浅色模式">
+    <svg class="icon obj-default-theme" title="切换深色模式" viewBox="0 0 16 16">
+        <use xlink:href="#svg-sun"></use>
+    </svg>
+    <svg class="icon obj-dark-theme hidden" title="切换浅色模式" viewBox="0 0 16 16">
+        <use xlink:href="#svg-moon"></use>
+    </svg>
+</button>
+
+<script>
+    const themeSwitcher = document.querySelector('.js-theme-switcher');
+    const defaultThemeIcon = document.querySelector('.obj-default-theme');
+    const darkThemeIcon = document.querySelector('.obj-dark-theme');
+
+    jtd.getTheme = function () {
+        const cssFileHref = (document.getElementById('jtdThemeCSS') || document.querySelector('[rel="stylesheet"]')).getAttribute('href');
+        return cssFileHref.substring(cssFileHref.lastIndexOf('-') + 1, cssFileHref.length - 4);
+    }
+
+    jtd.setTheme = function (theme) {
+        const cssFile = document.getElementById('jtdThemeCSS') || document.querySelector('[rel="stylesheet"]');
+        cssFile.setAttribute('href', cssFile.getAttribute('href').replace(jtd.getTheme(), theme));
+    }
+
+    let toggleDarkButton = () => {
+        let setDark = jtd.getTheme() !== 'dark';
+        if (setDark) {
+            jtd.setTheme('dark');
+            defaultThemeIcon.classList.add('hidden');
+            darkThemeIcon.classList.remove('hidden');
+        } else {
+            jtd.setTheme('default');
+            defaultThemeIcon.classList.remove('hidden');
+            darkThemeIcon.classList.add('hidden');
+        }
+        localStorage.setItem('darkModeButton', String(setDark));
+    }
+
+    jtd.addEvent(themeSwitcher, 'click', function () {
+        toggleDarkButton();
+    });
+
+    if (localStorage.getItem('darkModeButton') === 'true') {
+        toggleDarkButton();
+    }
+</script>
