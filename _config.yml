@@ -11,10 +11,7 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - node_modules/
-  - vendor/bundle/
-  - vendor/cache/
-  - vendor/gems/
-  - vendor/ruby/
+  - vendor/
   - LICENSE
   - README.md
 
@@ -26,8 +23,6 @@ search_enabled: true
 heading_anchors: true
 permalink: pretty
 aux_links:
-  深色模式:
-    - '#'
   GitHub:
     - https://github.com/Obelusod/octo
 aux_links_new_tab: true
