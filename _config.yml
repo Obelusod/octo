@@ -3,15 +3,13 @@ logo: "/assets/images/logo.png"
 description: 一个简单、优雅的博客/文档模版!
 baseurl: ''
 url: https://obelusod.github.io/octo
+theme: just-the-docs
 
 exclude:
   - .sass-cache/
   - .jekyll-cache/
-  - gemfiles/
   - Gemfile
   - Gemfile.lock
-  - node_modules/
-  - vendor/
   - LICENSE
   - README.md
 

@@ -1,8 +1,8 @@
 <a class="site-button btn-icon" id="theme-toggler" title="切换深色/浅色模式">
-    <svg class="icon" id="light-mode-icon" title="切换深色模式">
+    <svg class="icon" id="light-mode-icon">
         <use xlink:href="#svg-sun"></use>
     </svg>
-    <svg class="icon hidden" id="dark-mode-icon" title="切换浅色模式">
+    <svg class="icon hidden" id="dark-mode-icon">
         <use xlink:href="#svg-moon"></use>
     </svg>
 </a>
@@ -12,19 +12,19 @@
     const lightModeIcon = document.getElementById('light-mode-icon');
     const darkModeIcon = document.getElementById('dark-mode-icon');
 
-    jtd.getTheme = function () {
+    function getTheme() {
         const cssFileHref = (document.getElementById('jtdThemeCSS') || document.querySelector('[rel="stylesheet"]')).getAttribute('href');
         return cssFileHref.substring(cssFileHref.lastIndexOf('-') + 1, cssFileHref.length - 4);
     }
 
-    jtd.setTheme = function (theme) {
+    function setTheme(theme) {
         const cssFile = document.getElementById('jtdThemeCSS') || document.querySelector('[rel="stylesheet"]');
-        cssFile.setAttribute('href', cssFile.getAttribute('href').replace(jtd.getTheme(), theme));
+        cssFile.setAttribute('href', cssFile.getAttribute('href').replace(getTheme(), theme));
     }
 
     function toggleTheme() {
-        const newTheme = jtd.getTheme() === 'dark' ? 'default' : 'dark';
-        jtd.setTheme(newTheme);
+        const newTheme = getTheme() === 'dark' ? 'default' : 'dark';
+        setTheme(newTheme);
 
         lightModeIcon.classList.toggle('hidden', newTheme === 'dark');
         darkModeIcon.classList.toggle('hidden', newTheme !== 'dark');
