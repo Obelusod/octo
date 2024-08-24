@@ -11,7 +11,6 @@ layout: default
 {% endif %}
 {{ content }}
 {% endcapture %}
-{% if page.released or jekyll.environment == "debug" -%}
 {% if page.has_right_toc %}
 <nav class="content-nav">
     {% include toc.html html=content sanitize=true class="nav-list js-toc"
@@ -20,8 +19,5 @@ layout: default
 <div class="content-container">{{content}}</div>
 {% else %}
 <div class="content-container">{{content}}</div>
-{% endif %}
-{% else %}
-<div>This page has not been released yet.</div>
 {% endif %}
   

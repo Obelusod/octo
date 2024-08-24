@@ -6,7 +6,6 @@ has_children: true
 hide_title: true
 has_toc: true
 has_right_toc: false
-released: true
 ---
 
 # Math

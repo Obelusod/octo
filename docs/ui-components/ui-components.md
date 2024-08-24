@@ -7,7 +7,6 @@ permalink: /docs/ui-components
 hide_title: true
 has_toc: true
 has_right_toc: true
-released: true
 ---
 
 # UI Components

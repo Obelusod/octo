@@ -6,7 +6,6 @@ nav_order: 1
 hide_title: true
 has_toc: true
 has_right_toc: true
-released: true
 ---
 
 # Typography

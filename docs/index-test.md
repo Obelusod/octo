@@ -5,7 +5,6 @@ nav_order: 99
 hide_title: true
 has_toc: false
 has_right_toc: false
-released: true
 ---
 
 <button class="btn js-toggle-dark-mode">Preview dark color scheme</button>

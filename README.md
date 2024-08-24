@@ -1,6 +1,6 @@
 # Just the Octo
 
-这是一个简洁、优雅的博客/文档模版，参考自 [Just the Docs](https://github.com/just-the-docs/just-the-docs) 、[Just the Class](https://github.com/kevinlin1/just-the-class) 和 [CS 61B Website](https://github.com/Berkeley-CS61B/skeleton-sp24)。
+这是一个简洁、优雅的博客/文档模版，参考自 [Just the Docs](https://github.com/just-the-docs/just-the-docs) 、[Just the Class](https://github.com/kevinlin1/just-the-class) 和 [CS 61B Website](https://github.com/Berkeley-CS61B/website-sp24)。
 
 ## 模版特点
 
