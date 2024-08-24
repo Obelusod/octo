@@ -13,8 +13,9 @@ code {
 .btn-icon {
   background-color: rgba(0, 0, 0, 0);
   color: $body-text-color;
-  align-items: center;
+  justify-content: center;
   box-shadow: none;
+  max-width: 60px;
 
   .icon {
     color: $body-text-color;
@@ -22,6 +23,8 @@ code {
     align-items: center;
     transform: scale(1);
     transition: all 0.3s;
+    width: 18px;
+    height: 18px;
   }
 
   &:focus {
@@ -38,6 +41,7 @@ code {
   &.zeroclipboard-is-hover,
   &.zeroclipboard-is-active {
     background-color: rgba(0, 0, 0, 0);
+
     .icon {
       color: $link-color;
     }
@@ -48,6 +52,7 @@ code {
   &.zeroclipboard-is-active {
     background-color: rgba(0, 0, 0, 0);
     box-shadow: none;
+
     .icon {
       transform: scale(0.6);
       transition: all 0.3s;

@@ -1,16 +1,16 @@
-<button class="btn btn-icon js-theme-switcher" style="padding: 0.8em 0.4em 0.5em 0.8em;" title="切换深色/浅色模式">
-    <svg class="icon obj-default-theme" title="切换深色模式" viewBox="0 0 16 16">
+<a class="site-button btn-icon" id="theme-toggler" title="切换深色/浅色模式">
+    <svg class="icon" id="light-mode-icon" title="切换深色模式">
         <use xlink:href="#svg-sun"></use>
     </svg>
-    <svg class="icon obj-dark-theme hidden" title="切换浅色模式" viewBox="0 0 16 16">
+    <svg class="icon hidden" id="dark-mode-icon" title="切换浅色模式">
         <use xlink:href="#svg-moon"></use>
     </svg>
-</button>
+</a>
 
 <script>
-    const themeSwitcher = document.querySelector('.js-theme-switcher');
-    const defaultThemeIcon = document.querySelector('.obj-default-theme');
-    const darkThemeIcon = document.querySelector('.obj-dark-theme');
+    const themeToggler = document.getElementById('theme-toggler');
+    const lightModeIcon = document.getElementById('light-mode-icon');
+    const darkModeIcon = document.getElementById('dark-mode-icon');
 
     jtd.getTheme = function () {
         const cssFileHref = (document.getElementById('jtdThemeCSS') || document.querySelector('[rel="stylesheet"]')).getAttribute('href');
@@ -22,25 +22,19 @@
         cssFile.setAttribute('href', cssFile.getAttribute('href').replace(jtd.getTheme(), theme));
     }
 
-    let toggleDarkButton = () => {
-        let setDark = jtd.getTheme() !== 'dark';
-        if (setDark) {
-            jtd.setTheme('dark');
-            defaultThemeIcon.classList.add('hidden');
-            darkThemeIcon.classList.remove('hidden');
-        } else {
-            jtd.setTheme('default');
-            defaultThemeIcon.classList.remove('hidden');
-            darkThemeIcon.classList.add('hidden');
-        }
-        localStorage.setItem('darkModeButton', String(setDark));
+    function toggleTheme() {
+        const newTheme = jtd.getTheme() === 'dark' ? 'default' : 'dark';
+        jtd.setTheme(newTheme);
+
+        lightModeIcon.classList.toggle('hidden', newTheme === 'dark');
+        darkModeIcon.classList.toggle('hidden', newTheme !== 'dark');
+
+        localStorage.setItem('currentTheme', newTheme);
     }
 
-    jtd.addEvent(themeSwitcher, 'click', function () {
-        toggleDarkButton();
-    });
+    themeToggler.addEventListener('click', toggleTheme);
 
-    if (localStorage.getItem('darkModeButton') === 'true') {
-        toggleDarkButton();
+    if (localStorage.getItem('currentTheme') === 'dark') {
+        toggleTheme();
     }
 </script>
