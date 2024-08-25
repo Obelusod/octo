@@ -7,34 +7,4 @@
     </svg>
 </a>
 
-<script>
-    const themeToggler = document.getElementById('theme-toggler');
-    const lightModeIcon = document.getElementById('light-mode-icon');
-    const darkModeIcon = document.getElementById('dark-mode-icon');
-
-    function getTheme() {
-        const cssFileHref = (document.getElementById('jtdThemeCSS') || document.querySelector('[rel="stylesheet"]')).getAttribute('href');
-        return cssFileHref.substring(cssFileHref.lastIndexOf('-') + 1, cssFileHref.length - 4);
-    }
-
-    function setTheme(theme) {
-        const cssFile = document.getElementById('jtdThemeCSS') || document.querySelector('[rel="stylesheet"]');
-        cssFile.setAttribute('href', cssFile.getAttribute('href').replace(getTheme(), theme));
-    }
-
-    function toggleTheme() {
-        const newTheme = getTheme() === 'dark' ? 'default' : 'dark';
-        setTheme(newTheme);
-
-        lightModeIcon.classList.toggle('hidden', newTheme === 'dark');
-        darkModeIcon.classList.toggle('hidden', newTheme !== 'dark');
-
-        localStorage.setItem('currentTheme', newTheme);
-    }
-
-    themeToggler.addEventListener('click', toggleTheme);
-
-    if (localStorage.getItem('currentTheme') === 'dark') {
-        toggleTheme();
-    }
-</script>
+<script src="{{ '/assets/js/themeSwitch.js' | relative_url }}"></script>
