@@ -6,7 +6,7 @@ $y-offset: 60px;
   padding: 0;
   position: sticky;
   float: right;
-  top: 1em;
+  top: 3rem;
   flex: 0 0 25%;
   max-width: 25%;
   max-height: calc(100vh - 2em);
@@ -17,14 +17,6 @@ $y-offset: 60px;
 
   @media (max-width: $toc-break) {
     display: none;
-    // position: relative;
-    // float: right;
-    // flex: 0 0 100%;
-    // max-width: 100%;
-    // max-height: 100%;
-    // font-size: 1em;
-    // margin-top: -1em;
-    // padding-bottom: 10px;
   }
 
   .nav-list-link {
@@ -64,10 +56,18 @@ $y-offset: 60px;
   }
 }
 
+hr {
+  max-width: 75%;
+}
+
 .content-container {
   max-width: 75%;
 
   @media (max-width: $toc-break) {
     max-width: 100%
   }
+}
+
+.content-container > hr {
+  max-width: 100%;
 }

@@ -6,7 +6,7 @@ has_children: true
 permalink: /docs/ui-components
 hide_title: true
 has_toc: true
-has_right_toc: true
+has_right_toc: false
 ---
 
 # UI Components
