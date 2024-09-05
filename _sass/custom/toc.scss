@@ -14,6 +14,7 @@ $y-offset: 60px;
   overflow-y: auto;
   font-size: 0.9em;
   line-height: 1.8;
+  border-left: 1px solid #f3f3f3;
 
   @media (max-width: $toc-break) {
     display: none;
@@ -57,11 +58,17 @@ $y-offset: 60px;
 }
 
 hr {
-  max-width: 75%;
+  max-width: 71.5%;
+}
+
+@media (max-width: 1140px) {
+  hr {
+    max-width: 100%;
+  }
 }
 
 .content-container {
-  max-width: 75%;
+  max-width: 71.5%;
 
   @media (max-width: $toc-break) {
     max-width: 100%

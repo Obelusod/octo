@@ -2,8 +2,83 @@
 
 code {
   font-family: $mono-font-family;
-  font-size: 0.8em;
+  font-size: 0.85em;
   line-height: $body-line-height;
+}
+
+body {
+  font-size: 1.05rem;
+}
+
+@media (min-width: 50rem) {
+  .main {
+    max-width: 74.5rem;
+  }
+}
+
+@media (min-width: 50rem) {
+  .site-title {
+    padding-right: 1rem;
+  }
+}
+
+.site-title-container {
+  display: flex;
+  align-items: center;
+}
+
+.title-logo {
+  width: 30px;
+  height: 30px;
+}
+
+.title-text {
+  color: #87bcd6;
+  margin-left: 10px;
+}
+
+.side-bar {
+  align-items: flex-start;
+}
+
+@media (min-width: 50rem) {
+  .side-bar {
+    width: 18.75rem;
+  }
+}
+
+@media (min-width: 50rem) {
+  .side-bar + .main {
+    margin-left: max(18.75rem, (100% - 93rem) / 2 + 18.75rem);
+  }
+}
+
+@media (min-width: 50rem) {
+  .site-nav, .site-header, .site-footer {
+    width: 18.75rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+@media (min-width: 50rem) {
+  .site-header {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+@media (min-width: 50rem) {
+  .nav-list .nav-list-item .nav-list-link {
+    min-height: 2rem;
+    line-height: 1.5rem;
+    padding-right: 2rem;
+    padding-left: 4px;
+  }
+}
+
+.nav-list .nav-list-item {
+  font-size: 0.925rem !important;
 }
 
 .hidden {
@@ -66,19 +141,4 @@ code {
   .is-collapsed {
     display: none;
   }
-}
-
-.site-title-container {
-  display: flex;
-  align-items: center;
-}
-
-.title-logo {
-  width: 30px;
-  height: 30px;
-}
-
-.title-text {
-  color: #87bcd6;
-  margin-left: 10px;
 }
